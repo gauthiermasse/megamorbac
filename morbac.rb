@@ -37,19 +37,20 @@ class Board
   def verif
   	#line+column 	
  	for i in 0..2
- 		if (plateau[i][:"O"].value == plateau[i][:"1"].value && plateau[i][:"O"].value == plateau[i][:"2"].value) && (plateau[i][:"O"].value != "")			
- 			return "le joueur ayant le symbole #{plateau[i][:"0"].value} est un bg avec sa megaligne #{i}"	
+ 		if (plateau[i][:"0"].value == plateau[i][:"1"].value && plateau[i][:"0"].value == plateau[i][:"2"].value) && (plateau[i][:"0"].value != "")			
+ 			puts "le joueur ayant le symbole #{plateau[i][:"0"].value} gagne avec la ligne #{i}"	
  		elsif (plateau[0][:"#{i}"].value == plateau[1][:"#{i}"].value && plateau[0][:"#{i}"].value == plateau[2][:"#{i}"].value) && (plateau[0][:"#{i}"].value != "")
- 			return "le joueur ayant le symbole #{plateau[0][:"#{i}"].value} est un bg avec sa colonne massive #{i}"
+ 			puts "le joueur ayant le symbole #{plateau[0][:"#{i}"].value} gagne avec la colonne #{i}"
  		else
 		end 
 	end
 
 	#diago
-		if (plateau[0][:"O"].value == plateau[1][:"1"].value && plateau[0][:"O"].value == plateau[2][:"2"].value) && (plateau[0][:"O"].value != "")		
- 			return "le joueur ayant le symbole #{plateau[0][:"0"].value} est un bg avec sa diago d'enculé"	
- 		elsif (plateau[0][:"2"].value == plateau[1][:"1"].value && plateau[0][:"2"].value == plateau[2][:"O"].value) && (plateau[0][:"2"].value != "")		
- 			return "le joueur ayant le symbole #{plateau[0][:"2"].value} est un bg avec sa diago d'enculé"
+		if (plateau[0][:"0"].value == plateau[1][:"1"].value && plateau[0][:"0"].value == plateau[2][:"2"].value) && (plateau[0][:"0"].value != "")		
+ 			puts "le joueur ayant le symbole #{plateau[0][:"0"].value} gagne avec la première diagonale"	
+ 		elsif (plateau[0][:"2"].value == plateau[1][:"1"].value && plateau[0][:"2"].value == plateau[2][:"0"].value) && (plateau[0][:"2"].value != "")		
+ 			puts "le joueur ayant le symbole #{plateau[0][:"2"].value} gagne avec la diagonale inversée"
+ 		else
  		end
  	""
  	end
@@ -62,7 +63,7 @@ class Game
 
   def initialize
     @player = []
-    @player[0] = Player.new("O")
+    @player[0] = Player.new("0")
     @player[1] = Player.new("X")
     @board = Board.new
    	@turn = 0
@@ -80,10 +81,9 @@ class Game
 			board.plateau[@ligne][:"#{@colonne}"].value = "X"
 		end
     board.puts_plateau
-   # board.verif
     @turn += 1
   end
-=begin
+
   def runprogram
 	puts "bienvenue, morpionneurs"
 	board.puts_plateau
@@ -91,11 +91,9 @@ class Game
 		next_turn
 	end
 	coucou.board.verif
-end
-=end
+  end
 
-
-end #class game
+end #end de class game
 
 
 
@@ -109,17 +107,41 @@ class Player
 end
 
 coucou = Game.new
-coucou.next_turn
-coucou.next_turn
-coucou.next_turn
-coucou.next_turn
-coucou.next_turn
-coucou.next_turn
-coucou.next_turn
-coucou.next_turn
-coucou.next_turn
+coucou.runprogram
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+#coucou.next_turn
+#coucou.board.verif
 =begin
+coucou.next_turn
+coucou.board.verif
+coucou.next_turn
+coucou.board.verif
+coucou.next_turn
+coucou.board.verif
+coucou.next_turn
+coucou.board.verif
+coucou.next_turn
+coucou.board.verif
+coucou.next_turn
+coucou.board.verif
+coucou.next_turn
+coucou.board.verif
+coucou.next_turn
+coucou.board.verif
+
 
 
 runprogram
