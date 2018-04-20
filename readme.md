@@ -8,7 +8,7 @@ Mon programme:
 - demande le nom du premier joueur
 - demande le nom du second joueur
 - accueille les joueurs et crée un plateau de jeu vide
-- récolte les choix de jeu des joueurs tour par tour. Pour choisir une case, il faut choisir un chiffre entre 0 et 2 pour la ligne, et de nouveau choisir un chiffre entre 0 et 2 pour la colonne. 
+- récolte les choix de jeu des joueurs tour par tour. Pour choisir une case, il faut choisir un chiffre entre 0 et 2 pour la ligne puis appuyer sur entrée, et de nouveau choisir un chiffre entre 0 et 2 pour la colonne et de nouveau appuyer sur entrée. 
 - lorsqu'un joueur gagne (une ligne/colonne/diagonale complétée avec son propre signe 3 fois) la partie s'arrête
 
 Ce que j'aurais aimé réussir à faire mais il est tard:
